@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } 
 from 'react-native';
-import QuizItem from "./QuizItem";
 
 export default function MyQuizes() {
     const [quiz, setQuiz] = useState([{
@@ -42,13 +41,8 @@ export default function MyQuizes() {
             {
                 quiz.map((item, idx) => {
                     return (
-                        <QuizItem
-                            key={idx}
-                            index={idx}
-                            name={item.quiz_name}
-                            imageUrl={item.quiz_img_uri}
-                            onPress={handleQuizItemClick}
-                        />
+                        <Text>{item}</Text>
+                            
                     )
                 })
             }
